@@ -1,0 +1,49 @@
+<html>
+ <head> 
+  <title> DOM Manipulations </title>
+  <script type="text/javascript">
+   /* Dom Manipulations & getElementByTagName method */
+   function changeStyling()
+   {
+    //document.getElementById("p1");
+	var para = document.getElementsByTagName("p");
+	/*
+	para[0].style.fontSize = 65;
+	para[1].style.color = "red";
+	para[2].style.fontWeight = "bold";
+	para[3].style.fontStyle = "italic";
+	
+	*/
+	for (var i = 0; i <para.length; i++)
+	{
+	 para[i].style.fontSize = 22;
+	}
+	
+   }
+   
+   
+  </script>
+  
+ </head>
+ 
+ <body>
+  <p id="p1"> This is paragraph 1</p>
+  <p> This is paragraph 2</p>
+  <p> This is paragraph 3</p>
+  <p> This is paragraph 4</p>
+  <p> This is paragraph 5</p>
+  
+  
+  <a href="#"> This is anchor tag</a>
+  <div> </div>
+  <div> </div>
+  <div> </div>
+  <div> </div>
+  <div> </div>
+  <br>
+  <button onclick="changeStyling()">Click Me</button>
+ 
+ 
+ </body>
+ 
+</html>

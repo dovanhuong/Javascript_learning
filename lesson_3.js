@@ -1,0 +1,1 @@
+document.write("<h1> Externeal file for javscript</h1>");

@@ -1,0 +1,50 @@
+<html>
+ <head> 
+  <title>Regular Expressions in JS - 3 </title>
+  <script type="text/javascript">
+   /*
+    \d - match any digit (equal to [0-9])
+	\w - match any word character (a-z, A-Z, 0-9 & _)
+	\s - match whitespace character (eg - spaces & tabs)
+	\t - match a tab only
+   */
+   
+   function validate()
+   {
+    var text = document.getElementById("text1").value;
+	
+	var regx = /^[7-9]\d{9}$/;  // if we want to exclude something type: /[^7-9]/
+	/*
+	 ^ : carnet sign: exclude some character.
+	 $ : denotes the end of the string
+	 /^[7-9]/: start character from between 7 - 9
+	*/
+	/*
+	 Exercise: 1st character has to be between 5-9|next 8 characters have to between 
+	 a-z | last character has to be 0
+	*/
+	if(regx.test(text))
+	{
+	 document.getElementById("lbltext").innerHTML = "Valid";
+	 document.getElementById("lbltext").style.visibility = "visible";
+	 document.getElementById("lbltext").style.color = "green";
+	}
+	else
+	{
+	 document.getElementById("lbltext").innerHTML = "Invalid";
+	 document.getElementById("lbltext").style.visibility = "visible";
+	 document.getElementById("lbltext").style.color = "red"; 
+	}
+   }
+  </script>
+ </head>
+ <body>
+  <form>
+   <input id="text1" placeholder="Cellphone" type="text"/><br>
+   <label id="lbltext" style="color:red; visibility:hidden">Invalid</label>
+   <br>
+   <button onclick="validate()" type="button">Submit</button>
+  </form>
+ </body>
+ 
+</html>

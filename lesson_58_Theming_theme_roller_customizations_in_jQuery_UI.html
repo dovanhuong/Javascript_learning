@@ -1,0 +1,77 @@
+<html>
+ <head> 
+  <title> Themes in jQuery UI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/jquery-ui-excite-bike/jquery-ui.css">
+  <link rel="stylesheet" href="js/jquery-ui-excite-bike/jquery-ui.structure.css">
+  <link rel="stylesheet" href="js/jquery-ui-excite-bike/jquery-ui.theme.css">
+ </head>
+ 
+ <body>
+  <h2> Themes in jQuery UI</h2>
+  
+  <div id="dateinput" title="My Calendar">
+  </div>
+  
+  <div id="messagebox" title="Messagebox">
+   <h3>This just a dummy title</h3>
+   <img src="imgs/img.jpg" width="200px">
+  </div>
+  <br>
+  <div id="panels" style="width:80%">
+   <div> Huong Learning</div>
+   <div> Huong learning is <b>one</b> of the largest tech educational youtube channels in Vietnam</div>
+   <h3> Simple Learning</h3>
+   <p> Simple learning is an upcoming tech educational channel with more than 30K subscribers
+   Simple learning was started from 3 years back. Van Huong is a founder of this channel.</p>
+   <h3> DHBKHN</h3>
+   <p> Thi is my university </p>
+  </div>
+ </body>
+ <script src="js/jquery.js" type="text/javascript"></script>
+ <script src="js/jquery-ui-excite-bike/jquery-ui.js" type="text/javascript"></script>
+ <script>
+  $(document).ready(function(){
+  $("#dateinput").datepicker({
+   numberOfMonths: 1,
+   changeYear: true,
+   changeMonth: true,
+   showWeek: true,
+   weekHeader: "wk no",
+   showOtherMonths: true,
+   minDate: new Date(2019,0,7),
+   maxDate: new Date(2020,0,11),
+  });
+  
+  $("#messagebox").dialog({
+   title: "Custom Message Box",
+   draggable: true,
+   resizable: true,
+   height: 300,
+   width: 300,
+   modal: false,
+  
+  });
+  
+  $("#panels").accordion({
+   collapsible: true,
+   event: "click",
+   animate:300,
+   active: 0,
+   heightStyle: true,
+   icons: {header: "ui-icon-plus", activeHeader:"ui-icon-minus"},
+  });
+  
+  $("#actionbtn").click(function(){
+  });
+  
+  
+  
+  
+  
+  
+  
+  });
+ 
+ </script>
+</html>

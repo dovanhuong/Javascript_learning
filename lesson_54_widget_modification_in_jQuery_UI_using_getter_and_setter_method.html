@@ -1,0 +1,90 @@
+<html>
+ <head>
+  <title> Widget manipulations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/jqueryui/jquery-ui.css">
+  <link rel="stylesheet" href="js/jqueryui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="js/jqueryui/jquery-ui.theme.css">
+ </head>
+ 
+ <body>
+  <h2> Widget Manipulations</h2>
+  <button id="actionbtn"> Change </button>
+  <br>
+  <br>
+  <div id="dateinput" title="My Calender">
+  </div>
+  
+  <div id="messagebox" title="Messagebox">
+   <h3> This is just a dummy title</h3>
+   <img src="imgs/img.jpg" width="200px">
+  </div>
+  <br>
+  <div id="panels" style="width:80%">
+   <div> Van Huong Learning</div>
+   <div> Van Huong learning is <b>one</b>of the largest tech educational youtube channels in Vietnam</div>
+   <h3> Simple Learning</h3>
+   <p> Simple Learning is an upcoming tech educational channel with more than 40k subscribers
+   Simple Learning was started 4 years back. Van Huong is a founder of Simple Learning. </p>
+   <h3>DVHBKHN</h3>
+   <p> This is one of my favorite university</p>
+  </div>
+ </body>
+ <script src="js/jquery.js" type="text/javascript"></script>
+ <script src="js/jqueryui/jquery-ui.js" type="text/javascript"></script>
+ <script>
+  $(document).ready
+  (function(){
+   $("#dateinput").datepicker({
+    numberOfMonths:1,
+	changeYear:true,
+	changeMonth:true,
+	showWeek: true,
+	weekHeader: "wk No.",
+	showOtherMonths: true,
+	minDate: new Date(2019,0,7),
+	maxDate: new Date(2020,0,11)
+   
+   });
+   
+   $("#messagebox").dialog({
+    title: "Custom Message box",
+	draggable: true,
+	resizeable: true,
+	height: 300,
+	width: 300,
+	modal: false,
+   });
+   
+   $("#panels").accordion({
+    collapsible: true,
+	event: "click",
+	animate: 300,
+	active: 0,
+	heightStyle: true,
+	icons: {header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+   
+   });
+  
+  $("#actionbtn").click(function(){
+  //alert("alert");
+  // getter method
+  //var height = $("#messagebox").dialog("option","height");
+  //$("#messagebox").dialog("option","height",600);
+  //alert(height);
+  
+  // setter method
+  //$("#messagebox").dialog("option", "draggable",false);
+  //$("#messagebox").dialog("option", "resizeable",false);
+  $("#dateinput").datepicker("option", "numberOfMonths",2);
+  
+  
+  });
+  
+  
+  
+  
+  });
+  
+ </script>
+</html>

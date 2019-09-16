@@ -1,0 +1,47 @@
+<html>
+ <head>
+  <title>Regular Expressions in JS</title>
+  <script type="text/javascript">
+   /*
+    Regular Expressions are used to perform powerfull pattern-mathcing and
+	search-and-replace functions on text.
+	 E00-Huong-Software_developer
+	 ....
+	 
+	 Reference website:
+	 regex101.com
+	 
+   */
+   function validate()
+   {
+    var username = document.getElementById("uname").value;
+	var regx = /E00/;
+	
+	if(regx.test(username))
+	{
+	 alert("Valid username");
+	 return true;
+	}
+	else
+	{
+	 alert("Invalid Username");
+	 document.getElementById("lbluser").style.visibility="visible";
+	}
+   }
+   
+   
+  </script>
+  
+ </head>
+ <body>
+  <form action="message.html">
+   <input id="uname" placeholder="Username" type="text"/>
+   <br>
+   <label id="lbluser" style="color:red; visibility:hidden"> Invalid Username</label>
+   <br>
+   
+   <button onclick="validate()" type="button">Submit</button>
+  </form>
+ </body>
+
+</html>

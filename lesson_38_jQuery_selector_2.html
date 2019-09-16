@@ -1,0 +1,63 @@
+<html>
+ <head>
+  <title> jQuery Selectors - Part 2</title>
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+ 
+ <body>
+  <!---<h2 class="myheading" id="firstH2">Selectors up jQuery</h2>
+  <h2 class="myheading">Selectors up jQuery</h2> --->
+  
+  <h2> Selectors up jQuery</h2>
+  <p> This is a paragraph outside Div</p>
+  
+  <div id="firstdiv" class="mydivs">
+   <p>This is first paragraph in first division</p>
+   <p>This is second paragraph in first division</p>
+  </div>
+  <div id="seconddiv" class="mydivs">
+   <p>This is third paragraph in second division</p>
+  </div>
+  
+  <div id="thirddiv" class="mydivs">
+    <ul>
+	 <li>List item 1</li>
+	 <li>List item 2</li>
+	 <li>List item 3</li>
+	 <li>List item 4</li>
+	</ul>
+   <p>This is paragraph</p>
+  </div>
+  
+  <div>
+   <ul>
+    <li> List item 1</li>
+	<li> List item 2</li>
+	<li> List item 3</li>
+	<li> List item 4</li>
+   </ul>
+  </div>
+  
+  <button onclick="fn1()" id="btn1">Click Me</button>
+  
+ </body>
+ <script src="js/jquery.js"type="text/javascript"></script>
+ <script>
+  function fn1()
+  {
+   //document.getElementById();
+   // $("h2").action();
+   //$("#firstH2").fadeToggle(1500);
+   //$("div").fadeToggle(1500);
+   //$("#firstdiv, #seconddiv").fadeToggle(1000);
+   //$("#firstdiv, p, li").fadeToggle(1000);
+   //$("#firstdiv,p,li,.mydivs").fadeToggle(1000);
+   //$("div p").fadeToggle(1000);
+   //$("p:first").fadeToggle(1000); // hide the first paragraph.
+   //$(".mydivs:first").fadeToggle(1000); //hide the first class of "mydivs"
+   //$(".mydivs:odd").fadeToggle(1000);// hide for the even division - class of "mydivs" 
+   $("li:even").fadeToggle(1000); //all the list items with even number will be hidden
+  }
+ </script>
+ 
+</html>

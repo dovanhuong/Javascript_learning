@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title> Introduction to Objects</title>
+  <script type="text/javascript">
+   /* DOM manipulation & get element by Id method */
+   function buttonClick()
+   {
+    //alert("Button Clicked");
+	var str = document.getElementById("heading2").innerHTML ="Huong Do Van Learning";
+	alert(str);
+   }
+   buttonClick();
+  </script>
+  
+ <body>
+  <button onclick="buttonClick()">Click Me</button>
+  <h2 id="heading2">Some Random Text</h2>
+ </body>
+</html>

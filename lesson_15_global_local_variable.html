@@ -1,0 +1,34 @@
+<html>
+ <head>
+  <title> Scope of Variable</title>
+  <script type="text/javascript">
+   /*
+    In JS we have 2 types of scopes - Global & Local 
+	depending upon where you create your variables.
+   */
+   // if we don't use "var"keyword for declare a variable, it will default by global variable even you put it into function for local variable.
+   var1 = "huongdovan";
+   
+   var b = 6;
+   function myfunction()
+   {
+    var a = 5; // local variables
+	document.write("<h2>"+a+"</h2>");
+	document.write("<h2>can print out global variable"+b+"</h2>");
+	document.write("<h2>can print out default global variable "+var1+"</h2>");
+	var2 = "dovan huong";
+	
+   }
+   //var b = 10; //global variables
+   myfunction();
+   document.write("<h2>let see var2 "+var2+"</h2>");
+   
+   
+   //document.write("<h2> here this is local variable to print out wether or not "+a+"</h2>");// right, it cannot print out local variable outside of function
+   document.write("<h2>"+b+"</h2>");
+  </script>
+ </head>
+ <body>
+ </body>
+   
+</html>
